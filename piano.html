@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>A Piano Game</title>
+
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+			
+			@import url(https://fonts.googleapis.com/css?family=Patrick+Hand);
+			
+			body{	
+				font-family: 'hadows Into Light', cursive;
+				background-color: #7E8AA2;
+				text-align: center;
+			}
+
+			#head{
+				font-family: 'Shadows Into Light', cursive;
+				background-color: #FFFFFF;
+				color: black;
+				border-bottom: 0.8em solid #263248;
+				border-bottom-left-radius: 25px;
+				border-bottom-right-radius: 25px;
+			}
+
+			h1{
+				display: inline;
+				font-size: 4.1em;
+				margin: 0;	
+			}
+
+			h2, #livesLeft{
+				background-color: #263248;
+				padding: 0.2em 0.8em;
+				margin-left: 1em;
+				display: inline;
+				border-radius: 25px;
+			}
+			
+			h2{
+				color: white;
+				font-size: 1.5em;
+			}
+			
+			#livesLeft{
+				padding-top: 0.82em;
+			}
+			
+			.heart{
+				display: inline;	
+			}
+
+			#piano{
+				border-top: 0.2em solid #FF9800; 
+				padding: 0px;					
+			}
+
+			.key{
+				font-size: 1.5em;
+				height: 15em;
+				width: 4em;
+			}
+
+			#messageArea{
+				background-color: #263248;
+				color: #FF9800;
+				font-size: 1.5em;
+				border-radius: 25px;
+				margin-top: 0.5em;
+
+			}
+
+			#buttonsArea{
+				background-color: #FFFFFF;
+				color: black;
+				border-radius: 25px;
+				border: 0.2em solid #263248;
+				margin-top: 0.5em;
+				padding: 0.3em;
+			}
+
+			#buttonsArea button{
+				padding: 0.5em;
+				font-size: 1.2em;
+				margin-right: 0.5em;
+			}
+
+
+		</style> 	
+	</head>
+	<body>
+
+		<div id="head">
+			
+			<h1>Simon Game</h1>
+			<h2>Level <span id="levelN">1</span></h2>
+
+			<div id="livesLeft">
+				<div class="heart" id="heart1">
+					<img src="img/heart.png" width="18px" height="17px">
+				</div>
+				<div class="heart" id="heart2">
+					<img src="img/heart.png" width="18px" height="17px">
+				</div>
+				<div class="heart" id="heart3">
+					<img src="img/heart.png" width="18px" height="17px">
+				</div>
+			</div>
+			
+		</div>
+
+		<div id = "piano">
+			<button class = "key" onclick="userInput('1')">C</button>
+			<button class = "key" type="button" onclick="userInput('2')">D</button>
+			<button class = "key" type="button" onclick="userInput('3')">E</button>
+			<button class = "key" type="button" onclick="userInput('4')">F</button>
+			<button class = "key" type="button" onclick="userInput('5')">G</button>
+		</div>
+
+		<div id="messageArea">
+			<p id="messageToUser"></p>
+		</div>
+
+		<div id="buttonsArea">
+			<button class = "butt" type="submit" onclick="userMove()">Submit</button>
+			<button class = "butt" type="submit" onclick="inputSequence = 0;">Oops!</button>
+			<button  class = "butt" type="button" onclick="playMusic()">Replay Music</button>
+		</div>
+
+		<script type="text/javascript" src="js/piano.js"></script>
+	</body>
+</html>
